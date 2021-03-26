@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
-
+import Typography from '@material-ui/core/Typography';
 
 import './wheel.css';
 
@@ -48,7 +48,9 @@ export default class Wheel extends React.Component {
           {items.map((item, index) => (
             <div className="wheel-item" key={index} style={{ '--item-nb': index }}>
               <Avatar src={`https://cinco.linkedin.biz/api/raw/picture/${item}`} style={{width: 150, height:150}}>
-                {item.charAt(0).toUpperCase()}
+                <Typography variant="h3">
+                  {item.charAt(0).toUpperCase()}
+                </Typography>
               </Avatar>
             </div>
           ))}

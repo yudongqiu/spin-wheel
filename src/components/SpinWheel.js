@@ -124,7 +124,9 @@ class SpinWheel extends React.Component{
         <Avatar src={`https://cinco.linkedin.biz/api/raw/picture/${winner}`}
           style={{width: 400, height:400, left: 'calc(50% - 200px)'}}
         >
-          {winner?.charAt(0).toUpperCase()}
+          <Typography variant="h1">
+            {winner?.charAt(0).toUpperCase()}
+          </Typography>
         </Avatar>
         <Typography variant="h1" component="h2" style={{marginTop: 100}}>
           Congratulations, {winner}!
