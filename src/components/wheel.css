@@ -27,6 +27,7 @@
     border: solid var(--wheel-color) 3px;
     border-radius: 50%;
     user-select: none;
+    overflow: hidden;
   }
   
   /* Triangle de sélection = 1 rose +  1 blanc */

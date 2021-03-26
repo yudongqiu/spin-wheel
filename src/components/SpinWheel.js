@@ -116,7 +116,7 @@ class SpinWheel extends React.Component{
     }
     const backDrop = winner ? 
       <Backdrop
-        style={{zIndex: 2, color: '#ffffff'}}
+        style={{zIndex: 2, color: '#ffffff', backdropFilter: 'blur(10px)'}}
         open={backDropOpen}
         onClick={this.closeBackdrop}
       >
