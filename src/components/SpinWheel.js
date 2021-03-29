@@ -22,8 +22,6 @@ import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Wheel from './Wheel';
 
-
-
 class SpinWheel extends React.Component{
   constructor(props) {
     super(props);
@@ -116,13 +114,13 @@ class SpinWheel extends React.Component{
     }
     const backDrop = winner ? 
       <Backdrop
-        style={{zIndex: 2, color: '#ffffff', backdropFilter: 'blur(10px)'}}
+        style={{zIndex: 2, color: '#ffffff', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)'}}
         open={backDropOpen}
         onClick={this.closeBackdrop}
       >
       <div>
         <Avatar src={`https://cinco.linkedin.biz/api/raw/picture/${winner}`}
-          style={{width: 400, height:400, left: 'calc(50% - 200px)'}}
+          style={{width: 400, height:400, left: 'calc(50% - 200px)', color: '#ffffff'}}
         >
           <Typography variant="h1">
             {winner?.charAt(0).toUpperCase()}
@@ -154,7 +152,7 @@ class SpinWheel extends React.Component{
                     {Object.keys(members).map(name => (
                       <ListItem button key={name} onClick={() => this.handleToggle(name)}>
                         <ListItemAvatar>
-                          <Avatar src={`https://cinco.linkedin.biz/api/raw/picture/${name}`}>
+                          <Avatar style={{color: '#ffffff'}} src={`https://cinco.linkedin.biz/api/raw/picture/${name}`}>
                             {name.charAt(0).toUpperCase()}
                           </Avatar>
                         </ListItemAvatar>
@@ -173,7 +171,7 @@ class SpinWheel extends React.Component{
                     ))}
                     <ListItem>
                       <ListItemAvatar>
-                        <Avatar>{newName.charAt(0).toUpperCase()}</Avatar>
+                        <Avatar style={{color: '#ffffff'}}>{newName.charAt(0).toUpperCase()}</Avatar>
                       </ListItemAvatar>
                       <TextField id="standard-basic"
                         placeholder="Add more"
@@ -182,6 +180,7 @@ class SpinWheel extends React.Component{
                         onKeyPress={this.handleKeyPress}
                         error={inputError !== undefined}
                         helperText={inputError}
+                        autoComplete="off"
                       />
                       <ListItemSecondaryAction>
                         <IconButton edge="end" aria-label="delete"

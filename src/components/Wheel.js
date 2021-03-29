@@ -47,7 +47,10 @@ export default class Wheel extends React.Component {
         <div className={`wheel ${spinning}`} style={wheelVars} onClick={this.selectItem}>
           {items.map((item, index) => (
             <div className="wheel-item" key={index} style={{ '--item-nb': index }}>
-              <Avatar src={`https://cinco.linkedin.biz/api/raw/picture/${item}`} style={{width: 150, height:150}}>
+              <Avatar
+                src={`https://cinco.linkedin.biz/api/raw/picture/${item}`}
+                style={{width: 150, height:150, color: '#ffffff'}}
+              >
                 <Typography variant="h3">
                   {item.charAt(0).toUpperCase()}
                 </Typography>
